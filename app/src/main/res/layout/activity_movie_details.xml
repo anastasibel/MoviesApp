@@ -10,24 +10,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="280dp" />
+
         <ImageView
             android:id="@+id/background_image"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="0dp"
             android:background="@drawable/orig"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintDimensionRatio="375:298"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/background_mask"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:background="@drawable/mask"
             android:scaleType="matrix"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@id/background_image"
+            app:layout_constraintEnd_toEndOf="@id/background_image"
+            app:layout_constraintStart_toStartOf="@id/background_image"
+            app:layout_constraintTop_toTopOf="@id/background_image" />
 
         <TextView
             android:id="@+id/back"
@@ -207,6 +217,7 @@
             android:textColor="#D8D8D8"
             android:textSize="12sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/photo1"
             app:layout_constraintStart_toStartOf="@id/photo1"
             app:layout_constraintTop_toBottomOf="@id/photo1" />
@@ -234,6 +245,7 @@
             android:textColor="#D8D8D8"
             android:textSize="12sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/photo2"
             app:layout_constraintStart_toStartOf="@id/photo2"
             app:layout_constraintTop_toBottomOf="@id/photo2" />
@@ -261,6 +273,7 @@
             android:textColor="#D8D8D8"
             android:textSize="12sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/photo3"
             app:layout_constraintStart_toStartOf="@id/photo3"
             app:layout_constraintTop_toBottomOf="@id/photo3" />
@@ -288,6 +301,7 @@
             android:textColor="#D8D8D8"
             android:textSize="12sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/photo4"
             app:layout_constraintStart_toStartOf="@id/photo4"
             app:layout_constraintTop_toBottomOf="@id/photo4" />
