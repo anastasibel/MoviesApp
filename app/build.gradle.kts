@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.dz.myapplication"
+    namespace = "com.dz.moviesapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.dz.myapplication"
+        applicationId = "com.dz.moviesapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
