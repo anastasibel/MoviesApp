@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="170dp"
     android:layout_height="296dp"
+    android:layout_margin="8dp"
     android:background="@drawable/movie_bg"
     android:padding="2dp"
-    android:layout_margin="8dp">
+    android:textAlignment="center">
 
     <ImageView
         android:id="@+id/poster"
@@ -37,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Avengers"
+        android:text="Avengers: End Game"
         android:textColor="#ECECEC"
         android:textSize="14dp"
         android:textStyle="bold"
@@ -50,12 +52,110 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
-        android:text="130 MIN"
+        android:text="137 MIN"
         android:textColor="#565665"
         android:textSize="8dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/star_icon"
+        app:layout_constraintBottom_toBottomOf="@id/poster"
+        app:layout_constraintStart_toStartOf="@id/poster" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/star_icon"
+        app:layout_constraintBottom_toBottomOf="@id/poster"
+        app:layout_constraintStart_toEndOf="@id/star1" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/star_icon"
+        app:layout_constraintBottom_toBottomOf="@id/poster"
+        app:layout_constraintStart_toEndOf="@id/star2" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/star_icon"
+        app:layout_constraintBottom_toBottomOf="@id/poster"
+        app:layout_constraintStart_toEndOf="@id/star3" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/star_icon_gray"
+        app:layout_constraintBottom_toBottomOf="@id/poster"
+        app:layout_constraintStart_toEndOf="@id/star4" />
+
+    <TextView
+        android:id="@+id/reviews_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="7dp"
+        android:text="125 REVIEWS"
+        android:textColor="#6D6D80"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/poster"
+        app:layout_constraintStart_toEndOf="@id/star5" />
+
+    <TextView
+        android:id="@+id/tag_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="6dp"
+        android:text="Action, Adventure, Drama"
+        android:textColor="#FF3466"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@id/star1"
+        app:layout_constraintStart_toStartOf="@id/poster" />
+
+    <ImageView
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/like_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/rg_bg"
+        android:gravity="center"
+        android:text="13+"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
