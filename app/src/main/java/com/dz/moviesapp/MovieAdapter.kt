@@ -6,13 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MovieAdapter(private val movieList: List<Movie>) :
+class MovieAdapter() :
     RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
-    class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTV: TextView = itemView.findViewById(R.id.movie_name_tv)
-        val timingTV: TextView = itemView.findViewById(R.id.timing_tv)
-    }
+    private var movieList = listOf<Movie>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val itemView =
@@ -25,10 +22,21 @@ class MovieAdapter(private val movieList: List<Movie>) :
     }
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        val currentItem = movieList[position]
-        holder.nameTV.text = currentItem.name
-        val timingText = "${currentItem.timing} MIN"
-        holder.timingTV.text = timingText
+        holder.onBind(movieList[position])
     }
 
+    fun bindMovies(newMovies: List<Movie>) {
+        movieList = newMovies
+    }
+
+    class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val nameTV: TextView = itemView.findViewById(R.id.movie_name_tv)
+        private val timingTV: TextView = itemView.findViewById(R.id.timing_tv)
+
+        fun onBind(movie: Movie){
+            nameTV.text = movie.name
+            val timingText = "${movie.timing} MIN"
+            timingTV.text = timingText
+        }
+    }
 }
