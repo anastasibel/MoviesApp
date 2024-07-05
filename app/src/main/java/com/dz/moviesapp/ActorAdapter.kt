@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ActorAdapter: RecyclerView.Adapter<ActorAdapter.ActorViewHolder>() {
+class ActorAdapter : RecyclerView.Adapter<ActorAdapter.ActorViewHolder>() {
 
     private var actorsList = listOf<Actor>()
 
@@ -33,12 +33,9 @@ class ActorAdapter: RecyclerView.Adapter<ActorAdapter.ActorViewHolder>() {
         private val nameTV: TextView = itemView.findViewById(R.id.name)
         private val imageIV: ImageView = itemView.findViewById(R.id.photo)
 
-        fun onBind(actor: Actor){
+        fun onBind(actor: Actor) {
             nameTV.setText(actor.nameId)
             imageIV.setImageResource(actor.imageId)
         }
     }
-
-
-
 }

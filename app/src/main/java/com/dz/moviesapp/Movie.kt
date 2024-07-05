@@ -8,6 +8,6 @@ data class Movie(
     var rating: Double,
     val reviews: Int,
     val isLiked: Boolean,
-    val parentalGuidance : Int,
+    val parentalGuidance: Int,
     val image: Int,
 )

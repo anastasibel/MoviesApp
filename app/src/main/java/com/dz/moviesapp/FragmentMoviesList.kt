@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class FragmentMoviesList : Fragment() {
 
-    lateinit var recycler: RecyclerView
+    private var recycler: RecyclerView? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,8 +25,8 @@ class FragmentMoviesList : Fragment() {
 
         val layoutManager = GridLayoutManager(activity, 2, GridLayoutManager.VERTICAL, false)
         recycler = view.findViewById(R.id.grid_recycler)
-        recycler.layoutManager = layoutManager
-        recycler.adapter = MovieAdapter()
+        recycler?.layoutManager = layoutManager
+        recycler?.adapter = MovieAdapter()
 
 
         view.findViewById<TextView>(R.id.movies_list_tv).setOnClickListener {
@@ -43,7 +43,7 @@ class FragmentMoviesList : Fragment() {
     }
 
     private fun updateData() {
-        (recycler.adapter as? MovieAdapter)?.apply {
+        (recycler?.adapter as? MovieAdapter)?.apply {
             bindMovies(MoviesDataSource().getMovies())
         }
     }

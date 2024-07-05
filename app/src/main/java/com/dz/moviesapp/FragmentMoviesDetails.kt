@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class  FragmentMoviesDetails : Fragment() {
+class FragmentMoviesDetails : Fragment() {
 
-    lateinit var actorsRecycler: RecyclerView
+    private var actorsRecycler: RecyclerView? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,9 +24,8 @@ class  FragmentMoviesDetails : Fragment() {
 
         val layoutManager = LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
         actorsRecycler = view.findViewById(R.id.actors_recycler)
-        actorsRecycler.layoutManager = layoutManager
-
-        actorsRecycler.adapter = ActorAdapter()
+        actorsRecycler?.layoutManager = layoutManager
+        actorsRecycler?.adapter = ActorAdapter()
     }
 
     override fun onStart() {
@@ -35,7 +34,7 @@ class  FragmentMoviesDetails : Fragment() {
     }
 
     private fun updateData() {
-        (actorsRecycler.adapter as? ActorAdapter)?.apply {
+        (actorsRecycler?.adapter as? ActorAdapter)?.apply {
             bindActors(ActorsDataSource().getActors())
         }
     }
