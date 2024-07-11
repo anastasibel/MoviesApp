@@ -1,4 +1,4 @@
-package com.dz.moviesapp
+package com.dz.moviesapp.presentation.view.moviesList
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dz.moviesapp.data.MoviesDataSource
+import com.dz.moviesapp.R
+import com.dz.moviesapp.presentation.view.moviesDetails.FragmentMoviesDetails
 
 class FragmentMoviesList : Fragment() {
 

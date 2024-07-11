@@ -1,4 +1,4 @@
-package com.dz.moviesapp
+package com.dz.moviesapp.presentation.view.moviesList
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.dz.moviesapp.R
+import com.dz.moviesapp.domain.models.Movie
 
 class MovieAdapter() :
     RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
@@ -36,7 +38,7 @@ class MovieAdapter() :
         private val imageIV: ImageView = itemView.findViewById(R.id.poster)
         private val genresTV: TextView = itemView.findViewById(R.id.tag_tv)
         private val reviewsTV: TextView = itemView.findViewById(R.id.reviews_tv)
-        private val pgTV: TextView = itemView.findViewById(R.id.rg_tv)
+        private val pgTV: TextView = itemView.findViewById(R.id.pg_tv)
         private val likeIV: ImageView = itemView.findViewById(R.id.like)
         private val star1TV: ImageView = itemView.findViewById(R.id.star1)
         private val star2TV: ImageView = itemView.findViewById(R.id.star2)

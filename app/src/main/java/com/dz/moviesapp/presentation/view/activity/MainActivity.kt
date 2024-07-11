@@ -1,7 +1,9 @@
-package com.dz.moviesapp
+package com.dz.moviesapp.presentation.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.dz.moviesapp.R
+import com.dz.moviesapp.presentation.view.moviesList.FragmentMoviesList
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.dz.moviesapp
+package com.dz.moviesapp.presentation.view.moviesDetails
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.dz.moviesapp.R
+import com.dz.moviesapp.domain.models.Actor
 
 class ActorAdapter : RecyclerView.Adapter<ActorAdapter.ActorViewHolder>() {
 

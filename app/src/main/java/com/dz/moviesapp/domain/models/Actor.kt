@@ -1,4 +1,4 @@
-package com.dz.moviesapp
+package com.dz.moviesapp.domain.models
 
 data class Actor(
     val nameId: Int,

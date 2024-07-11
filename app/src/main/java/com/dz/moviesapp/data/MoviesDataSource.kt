@@ -1,4 +1,7 @@
-package com.dz.moviesapp
+package com.dz.moviesapp.data
+
+import com.dz.moviesapp.R
+import com.dz.moviesapp.domain.models.Movie
 
 
 class MoviesDataSource {
