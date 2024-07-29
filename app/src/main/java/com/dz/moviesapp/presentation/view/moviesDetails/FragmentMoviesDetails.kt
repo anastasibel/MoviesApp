@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dz.moviesapp.R
-import com.dz.moviesapp.data.ActorsDataSource
 
 class FragmentMoviesDetails : Fragment() {
 
@@ -27,18 +26,6 @@ class FragmentMoviesDetails : Fragment() {
         val layoutManager = LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
         actorsRecycler = view.findViewById(R.id.actors_recycler)
         actorsRecycler?.layoutManager = layoutManager
-        actorsRecycler?.adapter = ActorAdapter()
+        actorsRecycler?.adapter = PersonAdapter()
     }
-
-    override fun onStart() {
-        super.onStart()
-        updateData()
-    }
-
-    private fun updateData() {
-        (actorsRecycler?.adapter as? ActorAdapter)?.apply {
-            bindActors(ActorsDataSource().getActors())
-        }
-    }
-
 }

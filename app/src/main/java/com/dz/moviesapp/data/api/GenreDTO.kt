@@ -1,5 +1,5 @@
 package com.dz.moviesapp.data.api
 
-data class Genre(
+data class GenreDTO(
     val name: String
 )

@@ -1,6 +1,6 @@
 package com.dz.moviesapp.data.api
 
-data class Backdrop(
+data class PosterDTO(
     val previewUrl: String,
     val url: String
 )

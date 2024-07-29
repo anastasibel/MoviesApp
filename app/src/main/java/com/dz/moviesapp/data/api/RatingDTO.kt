@@ -1,6 +1,6 @@
 package com.dz.moviesapp.data.api
 
-data class Rating(
+data class RatingDTO(
     val await: Int,
     val filmCritics: Double,
     val imdb: Double,

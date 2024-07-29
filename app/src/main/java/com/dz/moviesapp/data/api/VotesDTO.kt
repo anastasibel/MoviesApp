@@ -1,6 +1,6 @@
 package com.dz.moviesapp.data.api
 
-data class Votes(
+data class VotesDTO(
     val await: Int,
     val filmCritics: Int,
     val imdb: Int,
