@@ -48,16 +48,22 @@ class MovieAdapter() :
         private val star5TV: ImageView = itemView.findViewById(R.id.star5)
 
         fun onBind(movie: Movie) {
-            nameTV.text = movie.name
-            val timingText = "${movie.movieLength} MIN"
+            val nameText = movie.name ?: (movie.enName ?: movie.alternativeName)
+            nameTV.text = nameText
+            val timing = movie.movieLength
+            val timingText = if (timing != null) "$timing MIN" else null
             timingTV.text = timingText
             imageIV.load(movie.poster?.url)
-            genresTV.text = movie.genres?.map { it.name }.toString()
-            val reviewsText = "${movie.votes?.imdb} REVIEWS"
+            val genresText = if (movie.genres != null) movie.genres.map { it.name }.toString().trim('[', ']') else null
+            genresTV.text = genresText
+            val reviews = movie.votes?.imdb
+            val reviewsText = if (reviews != null) "$reviews REVIEWS" else null
             reviewsTV.text = reviewsText
-            val pgText = "${movie.ageRating}+"
+            val pg = movie.ageRating
+            val pgText = if (pg != null) "$pg+" else null
             pgTV.text = pgText
-            if(movie.rating?.imdb != null){
+            pgTV.visibility = if (pgText == null) View.INVISIBLE else View.VISIBLE
+            if (movie.rating?.imdb != null) {
                 star1TV.setImageResource(if (movie.rating.imdb >= 1) R.drawable.star_icon else R.drawable.star_icon_gray)
                 star2TV.setImageResource(if (movie.rating.imdb >= 3) R.drawable.star_icon else R.drawable.star_icon_gray)
                 star3TV.setImageResource(if (movie.rating.imdb >= 5) R.drawable.star_icon else R.drawable.star_icon_gray)

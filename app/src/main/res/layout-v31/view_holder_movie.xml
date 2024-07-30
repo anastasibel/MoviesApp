@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="170dp"
     android:layout_height="296dp"
-    android:layout_margin="2dp"
+    android:layout_margin="8dp"
     android:background="@drawable/movie_bg"
     android:padding="2dp"
     android:textAlignment="center">
@@ -40,7 +40,7 @@
         android:layout_marginTop="8dp"
         android:text="Avengers: End Game"
         android:textColor="#ECECEC"
-        android:textSize="14sp"
+        android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/poster" />
@@ -53,7 +53,7 @@
         android:layout_marginBottom="8dp"
         android:text="137 MIN"
         android:textColor="#565665"
-        android:textSize="8sp"
+        android:textSize="8dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

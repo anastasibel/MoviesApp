@@ -8,6 +8,8 @@ import com.dz.moviesapp.data.api.VotesDTO
 
 data class Movie(
     val name: String?,
+    val enName: String?,
+    val alternativeName: String?,
     val description: String?,
     val rating: RatingDTO?,
     val votes: VotesDTO?,

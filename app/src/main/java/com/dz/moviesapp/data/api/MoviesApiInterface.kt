@@ -13,6 +13,8 @@ interface MoviesApiInterface {
         @Query("limit") limit:Int = 100,
         @Query("selectFields") selectFields: List<String> = listOf(
             "name",
+            "enName",
+            "alternativeName",
             "description",
             "rating",
             "ageRating",
