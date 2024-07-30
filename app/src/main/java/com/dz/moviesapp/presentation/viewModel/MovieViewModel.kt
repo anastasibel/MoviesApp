@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class MovieViewModel(private val retrofitInstance: RetrofitInstance) : ViewModel() {
+class MovieViewModel() : ViewModel() {
 
     private val _movieList = MutableStateFlow<List<Movie>>(emptyList())
 
@@ -17,7 +17,7 @@ class MovieViewModel(private val retrofitInstance: RetrofitInstance) : ViewModel
 
     init {
         viewModelScope.launch {
-            _movieList.value = retrofitInstance.api.getList().docs
+            _movieList.value = RetrofitInstance.api.getList().docs
         }
     }
 
